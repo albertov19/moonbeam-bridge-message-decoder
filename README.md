@@ -4,29 +4,10 @@ Decode `BridgeMessage` payloads from Moonbeam/Moonriver cross-chain bridge messa
 
 ## Usage
 
-1. Replace the hex payload in `src/main.rs`:
-
-```rust
-let raw = hex!(
-    "YOUR_HEX_PAYLOAD_HERE"
-);
-```
-
-2. Run:
+### Run
 
 ```bash
-cargo run
-```
-
-## Message Format
-
-The raw message has a 2-byte compact length prefix that must be skipped:
-
-```
-[0x31 0x02] [BridgeMessage payload...]
- ^^^^^^^^    ^^^^^^^^^^^^^^^^^^^^^^^
- length      actual data (140 bytes)
- prefix
+cargo run -- 0x31020502090200511f051c2509030b01009d1f00080001040a000f0000434fd7946a0002046e0300931715fee2d06333043d11f658c8ce934ac61d0c00828d5b000a130001040a000f0000434fd7946a000d010208000103001c7fb1cbabcd242804342a3a5ebff63f0c7017422cfbce4f422ce0d901e2131b36c1480582eab6db134e6caf41e10ae1cbd6c3f509
 ```
 
 ## Example Output
