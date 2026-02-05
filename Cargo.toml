@@ -1,0 +1,11 @@
+[package]
+name = "moonbeam-bridge-message-decoder"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+hex = "0.4"
+hex-literal = "0.4"
+parity-scale-codec = "3.6"
+staging-xcm = { git = "https://github.com/paritytech/polkadot-sdk", branch = "stable2512" }
+staging-xcm-builder = { git = "https://github.com/paritytech/polkadot-sdk", branch = "stable2512" }
